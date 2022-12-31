@@ -1,0 +1,247 @@
+.contenedor-app {
+  position: relative;
+  top: 20px;
+  max-width: 800px;
+  min-height:100%;
+  height: 100%;
+  margin: auto;
+  background: #2999a5;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+}
+
+.nombre-app {
+  position: relative;
+  width: 90%;
+  height: 30px;
+  top: 15px;
+  font-family: Lato, sans-serif;
+  /* font-family: Roboto, sans-serif; */
+  font-style: normal;
+  font-size: 36px;
+  line-height: 42px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #4e4438;
+  color: #024a59;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+.logo-git{
+  height: 30px;
+}
+
+.area-texto {
+  position: relative;
+  width: 94%;
+  height: 380px;
+  margin: auto;
+  top: 40px;
+  background: #f8f9e9;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding-bottom: 30px;
+}
+
+.area-informacion {
+  position: relative;
+  width: 96%;
+  height: 30px;
+  margin: auto;
+  top: 45px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  color: #024a59;
+  mix-blend-mode: normal;
+  font-weight: bold;
+}
+
+.aviso-icono {
+  padding-right: 10px;
+}
+
+.area-botones {
+  position: relative;
+  width: 100%;
+  min-height: 97px;
+  top: 50px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.botones-short {
+  width: 300px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.boton-copiar,
+.boton-limpiar {
+    background: #024a59; /* color de fondo */
+    color: #f8f9e9; /* color de fuente */
+    border: 2px solid #003a46; /* tamaño y color de borde */
+    width: 140px;
+    height: 97px;
+    padding: 20px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+.boton-copiar:hover {
+    color: #4E4438;/* color de fuente hover */
+  }
+
+.boton-limpiar:hover {
+    color: #4E4438;/* color de fuente hover */
+  }
+
+.boton-copiar::after {
+    content: "";
+    background: #f8f9e9; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+    transition: all 0.3s ease;
+  }
+
+  .boton-limpiar::after {
+    content: "";
+    background: #f8f9e9; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+    transition: all 0.3s ease;
+  }
+
+  .boton-copiar:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1) rotate(0deg);
+  }
+
+  .boton-limpiar:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1) rotate(0deg);
+  }
+
+  
+@media screen and (max-width: 768px) {
+  .contenedor-app {
+    height: 100%;
+  }
+
+  .nombre-app {
+    height: 15px;
+  }
+
+  .area-texto {
+    position: relative;
+    width: 96%;
+    /* height: 300px; */
+    font-size: 25px;
+    /* line-height: 15px; */
+  }
+
+.area-botones{
+    width: 100%;
+}
+
+.botones-short{
+    width: 100%;
+}
+
+.boton-copiar, .boton-limpiar{
+    width: 45%;
+}
+
+.area-informacion{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: center;
+    padding: 10px;
+}
+}
+
+  
+@media screen and (max-width: 375px) {
+    .contenedor-app {
+      height: 100%;
+    }
+  
+    .nombre-app {
+      height: 15px;
+    }
+  
+    .area-texto {
+      position: relative;
+      width: 96%;
+      height: 200px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  
+  .area-botones{
+      width: 100%;
+  }
+  
+  .botones-short{
+      width: 100%;
+  }
+  
+  .boton-copiar, .boton-limpiar{
+      width: 45%;
+      height: 60px;
+      padding-top: 12px;
+      font-size: 15px;
+  }
+  
+  .area-informacion{
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      align-content: flex-end;
+      justify-content: center;
+      padding: 10px;
+      font-size: 15px;
+  }
+  }
+  

@@ -1,3 +1,21 @@
-.encriptadorInput{
-    width: 500px;
-}
+.encriptadorInput {
+    position: relative;
+    width: 100%;
+    border: none;
+    height: 100%;
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    color: #4e4438;
+    mix-blend-mode: normal;
+    resize: none;
+    background-color: transparent;
+    user-select: none;
+    box-shadow: none;
+    outline:none;
+    padding: 10px;
+  }

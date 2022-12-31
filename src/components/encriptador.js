@@ -3,17 +3,23 @@ import Boton from "./boton";
 import Limpiar from "./limpiar";
 import Validar from "./validar";
 import Copiar from "./copiar";
+import { FcHighPriority, FcHeatMap } from "react-icons/fc";
+import LogoGit from "../images/logo_github_verde.png";
+
+import "../styles/encriptador.css";
 
 export default function Encriptador() {
   const [value, setValue] = useState("");
-  const [mensaje, setMensaje] = useState("Encriptador de Texto");
+  const [mensaje, setMensaje] = useState(
+    "Solo letras minúsculas y sin acentos."
+  );
   const vocales = { a: "ai", e: "enter", i: "imes", o: "ober", u: "ufat" };
 
   function mostrarMensaje(e) {
     setMensaje(e);
     setTimeout(() => {
-      setMensaje("Encriptador de Texto");
-    }, 3000);
+      setMensaje("Solo letras minúsculas y sin acentos.");
+    }, 4000);
   }
 
   function registraTexto(e) {
@@ -57,15 +63,15 @@ export default function Encriptador() {
       var desec = "";
       for (let i = 0; i < obj.length; i++) {
         if (vocales[obj[i]]) {
-            //Comparo si son iguales
-            if (
-              obj.substring(i, vocales[obj[i]].length + i) === vocales[obj[i]]
-            ) {
-              desec += obj[i];
-              i += vocales[obj[i]].length - 1;
-            } else {
-              desec += obj[i];
-            }
+          //Comparo si son iguales
+          if (
+            obj.substring(i, vocales[obj[i]].length + i) === vocales[obj[i]]
+          ) {
+            desec += obj[i];
+            i += vocales[obj[i]].length - 1;
+          } else {
+            desec += obj[i];
+          }
         } else desec += obj[i];
       }
       setValue(desec);
@@ -74,8 +80,18 @@ export default function Encriptador() {
   }
 
   return (
-    <div className="contenedor-principal">
-      <div>{mensaje}</div>
+    <div className="contenedor-app">
+      <div className="nombre-app">
+        <div>
+          <FcHeatMap className="aviso-icono" />
+          ENCRYPTOR
+        </div>
+        <div>
+          <a href="https://github.com/rafopm/encriptador-texto-2">
+            <img className="logo-git" src={LogoGit} alt="Logo GitHub" />
+          </a>
+        </div>
+      </div>
       <div className="area-texto">
         <Validar
           onChange={registraTexto}
@@ -83,7 +99,9 @@ export default function Encriptador() {
           className="encriptadorInput"
         />
       </div>
-
+      <div className="area-informacion">
+        <FcHighPriority className="aviso-icono" /> {mensaje}
+      </div>
       <div className="area-botones">
         <Boton
           texto="Encriptar"
@@ -98,10 +116,10 @@ export default function Encriptador() {
           operacion={desencriptar}
           className="boton-desencriptar"
         />
-
-        <Limpiar texto="Limpiar" className="boton-limpiar" onClick={limpia} />
-
-        <Copiar texto="Copiar" className="boton-copiar" onClick={copy} />
+        <div className="botones-short">
+          <Limpiar texto="Limpiar" className="boton-limpiar" onClick={limpia} />
+          <Copiar texto="Copiar" className="boton-copiar" onClick={copy} />
+        </div>
       </div>
     </div>
   );

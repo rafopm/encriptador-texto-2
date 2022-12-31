@@ -1,0 +1,105 @@
+/* .boton-encriptar,
+.boton-desencriptar {
+  position: relative;
+  width: 250px;
+  height: 97px;
+  top: 0px;
+  background: #024a59;
+  box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.289);
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #f8f9e9;
+  border-radius: 10px;
+} */
+
+.boton-encriptar,
+.boton-desencriptar {
+    background: #024a59; /* color de fondo */
+    color: #f8f9e9; /* color de fuente */
+    border: 2px solid #003a46; /* tamaño y color de borde */
+    width: 220px;
+    height: 97px;
+    padding: 20px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    /* font-weight: 400; */
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+.boton-encriptar:hover {
+    color: #4E4438;/* color de fuente hover */
+  }
+
+.boton-desencriptar:hover {
+    color: #4E4438;/* color de fuente hover */
+  }
+
+.boton-encriptar::after {
+    content: "";
+    background: #f8f9e9; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+    transition: all 0.3s ease;
+  }
+
+  .boton-desencriptar::after {
+    content: "";
+    background: #f8f9e9; /* color de fondo hover */
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(0, 0) rotate(-180deg);
+    transition: all 0.3s ease;
+  }
+
+  .boton-encriptar:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1) rotate(0deg);
+  }
+
+  .boton-desencriptar:hover::after {
+    transition: all 0.3s ease-out;
+    transform: scale(1, 1) rotate(0deg);
+  }
+
+  
+@media screen and (max-width: 768px) {
+    .boton-encriptar,
+    .boton-desencriptar {
+        width: 96%;
+    }
+  }
+  
+
+  
+@media screen and (max-width: 375px) {
+    .boton-encriptar,
+    .boton-desencriptar {
+        width: 96%;
+        height: 60px;
+        padding-top: 12px;
+        font-size: 15px;
+    }
+  }
+  

@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto:wght@300&display=swap");
+
+body {
+  background: #024a59;
+}
+
+.navigator {
+  position: sticky;
+  top: 0px;
+  height: 70px;
+  width: 100%;
+  background: #f8f9e9;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-alura {
+  padding-right: 100px;
+  padding-left: 40px;
+}
+
+.logo-one {
+  padding-left: 400px;
+  padding-right: 0px;
+}
+
+@media screen and (max-width: 800px) {
+    .logo-alura {
+      padding-right: 0px;
+      padding-left: 10px;
+      height:30px;
+    }
+  
+    .logo-one {
+      padding-left: 20px;
+      padding-right: 0px;
+      height:30px;
+    }
+  
+    .navigator {
+      top: 0px;
+      height: 25px;
+      width: 100%;
+      background: #f8f9e9;
+      display: flex;
+      /* flex-wrap: wrap; */
+      /* flex-direction: row; */
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+@media screen and (max-width: 768px) {
+  .logo-alura {
+    padding-right: 0px;
+    padding-left: 10px;
+  }
+
+  .logo-one {
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+
+  .navigator {
+    top: 0px;
+    height: 70px;
+    width: 100%;
+    background: #f8f9e9;
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: center;
+  }
+}

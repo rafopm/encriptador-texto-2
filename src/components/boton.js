@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/boton.css"
 
 function Boton({ texto, operacion, className}) {
 
