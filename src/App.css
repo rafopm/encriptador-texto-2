@@ -2,6 +2,7 @@
 
 body {
   background: #024a59;
+  background-image: radial-gradient(circle at 65.24% 28.23%, #00b1bb 0, #009baa 12.5%, #008294 25%, #006778 37.5%, #014a59 50%, #0e2f3a 62.5%, #0a313e 75%, #072e3c 87.5%, #023647 100%);
 }
 
 .navigator {
