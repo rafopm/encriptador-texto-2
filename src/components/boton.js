@@ -1,12 +1,12 @@
 import React from "react";
 
-function Boton({ texto, esBotonDeEncriptar, operacion }) {
+function Boton({ texto, operacion, className}) {
 
   
 
   return (
     <button
-      className={esBotonDeEncriptar ? "boton-encriptar" : "boton-desencriptar"}
+      className={className}
       onClick={operacion}
     >
       {texto}
