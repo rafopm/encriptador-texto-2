@@ -60,7 +60,7 @@ export default function Encriptador() {
     if (obj === "") {
       mostrarMensaje("Debe ingresar el texto a Desencriptar.");
     } else {
-      var desec = "";
+      let desec = "";
       for (let i = 0; i < obj.length; i++) {
         if (vocales[obj[i]]) {
           //Comparo si son iguales
