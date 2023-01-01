@@ -9,6 +9,7 @@ export default function Validar({ defaultValue, onChange, className }) {
 
   return (
     <textarea
+      spellcheck=”false“
       cols={10}
       rows={20}
       value={defaultValue}
