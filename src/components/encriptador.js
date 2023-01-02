@@ -13,7 +13,19 @@ export default function Encriptador() {
   const [mensaje, setMensaje] = useState(
     "Solo letras minúsculas y sin acentos."
   );
-  const vocales = { a: "ai", e: "enter", i: "imes", o: "ober", u: "ufat", á: "ai", é: "enter", í: "imes", ó: "ober", ú: "ufat", c: "cif" };
+  const vocales = {
+    a: "ai",
+    e: "enter",
+    i: "imes",
+    o: "ober",
+    u: "ufat",
+    á: "ai",
+    é: "enter",
+    í: "imes",
+    ó: "ober",
+    ú: "ufat",
+    c: "cixf",
+  };
 
   function mostrarMensaje(e) {
     setMensaje(e);
